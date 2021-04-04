@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>Reaction Timer Game</h1>
-    <button class="btn" @click="start" :delay="delay" :disabled="isPlaying">
+    <button class="btn" @click="start" :disabled="isPlaying">
       Start
     </button>
-    <Block v-if="isPlaying" />
+    <Block v-if="isPlaying" :delay="delay" />
   </div>
 </template>
 
@@ -25,7 +25,6 @@ export default {
     start() {
       this.isPlaying = true;
       this.delay = 2000 + Math.random() * 5000;
-      console.log(this.delay);
     },
   },
 };

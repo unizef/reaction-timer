@@ -1,5 +1,5 @@
 <template>
-  <div class="block">
+  <div v-if="showBlock" class="block">
     Click Me
   </div>
 </template>
@@ -8,6 +8,17 @@
 import "../assets/styles/global.css";
 export default {
   props: ["delay"],
+  data() {
+    return {
+      showBlock: false,
+    };
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.showBlock = true;
+    }, this.delay);
+  },
 };
 </script>
 
