@@ -1,16 +1,20 @@
 <template>
   <div>
     <h1>Reaction Timer Game</h1>
-    <button class="btn" @click="start">Start</button>
+    <button class="btn" @click="start" :delay="delay" :disabled="isPlaying">
+      Start
+    </button>
+    <Block v-if="isPlaying" />
   </div>
 </template>
 
 <script>
 import "./assets/styles/global.css";
+import Block from "./components/Block";
 
 export default {
   name: "App",
-  components: {},
+  components: { Block },
   data() {
     return {
       isPlaying: false,
@@ -28,6 +32,9 @@ export default {
 </script>
 
 <style>
+h1 {
+  margin-bottom: 50px;
+}
 #app {
   text-align: center;
   color: var(--primary-color);
