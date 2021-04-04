@@ -1,0 +1,48 @@
+/*********************
+       VARIABLES 
+*********************/
+:root {
+  --primary-color: #444;
+  --secondary-color: teal;
+  --max-width: 1100px;
+}
+/*********************
+     RESET
+*********************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*********************
+ MAIN STYLING
+*********************/
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  /* By default 100% of its container */
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Segoe UI", sans-serif;
+  text-decoration: none;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
