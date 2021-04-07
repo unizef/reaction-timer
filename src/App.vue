@@ -44,9 +44,10 @@ export default {
 h1 {
   margin-bottom: 50px;
 }
+
 #app {
   text-align: center;
   color: var(--primary-color);
-  margin-top: 60px;
+  margin-top: 8rem;
 }
 </style>

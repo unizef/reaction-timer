@@ -29,11 +29,6 @@ body {
   font-size: 16px;
 }
 
-img {
-  /* By default 100% of its container */
-  width: 100%;
-}
-
 .btn {
   display: inline-block;
   font-family: "Segoe UI", sans-serif;
@@ -45,4 +40,9 @@ img {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
