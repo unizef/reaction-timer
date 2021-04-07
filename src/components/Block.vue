@@ -24,6 +24,7 @@ export default {
         "🐱",
         "🐺",
         "🦁",
+        "🦄",
       ],
       count: 3,
       showBlock: false,
@@ -41,7 +42,7 @@ export default {
 
   methods: {
     randomAnimal() {
-      this.animal = Math.floor(Math.random() * 5);
+      this.animal = Math.floor(Math.random() * 14);
     },
     startTimer() {
       this.timer = setInterval(() => {
@@ -50,7 +51,7 @@ export default {
     },
     stopTimer() {
       clearInterval(this.timer);
-      console.log("reaction time: ", this.reactionTime);
+      this.$emit("end", this.reactionTime);
     },
   },
 };
@@ -62,13 +63,4 @@ export default {
   padding: 15px;
   cursor: pointer;
 }
-/* .block {
-  width: 400px;
-  border-radius: 20px;
-  background: var(--secondary-color);
-  color: #fff;
-  text-align: center;
-  padding: 100px 0;
-  margin: 40px auto;
-} */
 </style>
